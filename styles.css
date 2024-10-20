@@ -1,0 +1,223 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Change font family to a more modern look */
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Scrolling Notice */
+.scrolling-notice {
+    font-weight: bold;
+    color: #333;
+    background-color: #ffcc00;
+    padding: 12px; /* Increased padding for better visibility */
+    font-size: 1.1rem; /* Slightly larger font size */
+}
+
+/* Leaderboard Container */
+.leaderboard-container {
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 30px; /* Increased padding for a more spacious feel */
+    max-width: 1200px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+/* Heading Style */
+.leaderboard-container h2 {
+    color: #004d99;
+    font-size: 2.5rem; /* Larger heading font */
+    margin-bottom: 20px;
+}
+
+/* Info Boxes */
+.info-box {
+    background-color: #e6f2ff;
+    padding: 20px; /* Increased padding for better spacing */
+    border: 1px solid #004d99;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #004d99;
+    font-size: 1.2rem; /* Larger font size */
+}
+
+/* Search Input */
+#searchInput {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px; /* Increased padding for the input */
+    margin: 20px auto;
+    border-radius: 5px;
+    border: 1px solid #004d99;
+    font-size: 1rem; /* Increased font size for better readability */
+}
+
+/* Badges Section */
+.badges-container {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent badges from wrapping */
+    justify-content: center; /* Center align badges */
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    padding: 15px 0; /* Vertical padding for badges section */
+}
+
+/* Individual Badge Box */
+.badge-box {
+    background-color: #e0f7fa; /* Light blue background */
+    border: 1px solid #00838f; /* Darker blue border */
+    border-radius: 10px; /* More rounded corners */
+    padding: 20px; /* Increased padding for badge boxes */
+    margin: 10px; /* Margin between badges */
+    text-align: center;
+    transition: transform 0.3s; /* Add a transition for hover effect */
+    flex: 0 0 auto; /* Prevent flex items from shrinking or growing */
+    width: 150px; /* Adjusted width for better appearance */
+}
+
+.badge-box:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+/* Badge Image */
+.badge-image {
+    height: 70px; /* Increased height of badge images */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* Badge Description */
+.badge-description {
+    margin-top: 10px; /* Space between image and text */
+    font-size: 0.9rem; /* Smaller font size for descriptions */
+    color: #555; /* Slightly darker color for descriptions */
+}
+
+/* Table Styling */
+.table-responsive {
+    margin-top: 20px;
+}
+
+thead.thead-dark {
+    background-color: #004d99;
+    color: white;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 1rem; /* Table font size */
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+.lb{
+    margin-top: -100px;
+}
+
+/* Special Badges Images */
+#specialbadges{
+    margin-top: 20px;
+    margin-bottom: -100px;
+}
+.special-badge {
+    height: 30px;
+    width: auto;
+    margin: 5px;
+}
+/* Badge Name */
+.badge-name {
+    font-size: 1.1rem; /* Size of the badge name */
+    font-weight: bold; /* Bold font for emphasis */
+    color: #004d99; /* Color for the badge name */
+    margin-bottom: 8px; /* Space between badge name and image */
+}
+
+/* Badges Container */
+.badges-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow badges to wrap into new lines as needed */
+    justify-content: center; /* Center align badges */
+    margin: 20px 0;
+}
+
+/* Badge Box */
+.badge-box {
+    background-color: #e6f2ff; /* Light blue background for badge boxes */
+    border: 1px solid #004d99; /* Border color for badge boxes */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Padding inside the badge box */
+    margin: 10px; /* Margin around each badge box */
+    flex: 0 1 150px; /* Flexbox properties for responsive sizing */
+    text-align: center; /* Center text inside badge boxes */
+}
+
+/* Badge Image */
+.badge-image {
+    height: 80px; /* Set a consistent height for badge images */
+    width: auto; /* Maintain aspect ratio */
+    margin-bottom: 5px; /* Space between image and text */
+}
+
+/* Badge Description */
+.badge-description {
+    font-size: 0.9rem; /* Font size for badge descriptions */
+    color: #333; /* Text color for descriptions */
+}
+
+
+/* Footer Styling */
+footer {
+    padding: 20px;
+    background-color: #f4f4f9;
+    text-align: center;
+}
+
+footer img {
+    height: 50px;
+    width: auto;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .leaderboard-container {
+        padding: 15px;
+    }
+
+    #searchInput {
+        width: 90%; /* Full width for search input */
+        max-width: 90%; /* Limit max width for smaller screens */
+    }
+
+    .info-boxes {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .info-box {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    table th, table td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+    }
+}

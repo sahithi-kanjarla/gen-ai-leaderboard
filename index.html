@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gen AI Study Jam Leaderboard</title>
+    <!-- Bootstrap CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Scrolling Notice -->
+    <div class="container-fluid bg-warning py-2">
+        <div class="scrolling-notice text-center">
+            📢 Notice: The deadline for the Gen AI Study Jam is November 1st! Don't miss it!
+        </div>
+    </div>
+
+    <!-- Leaderboard Section -->
+    <div class="container leaderboard-container mt-5">
+        <h2 class="text-center">GEN AI STUDY JAM LEADERBOARD</h2>
+
+        <!-- Info Boxes -->
+      
+        <!-- Search Input -->
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-6 col-sm-12">
+                <input type="text" id="searchInput" class="form-control" placeholder="Search by Name" onkeyup="filterTable()">
+            </div>
+        </div>
+
+        <!-- Badges Section -->
+       <!-- Badges Section -->
+<div class="row justify-content-center mb-5">
+    <div id="specialbadges">
+    <h3 class="text-center mb-4">Earn Special Badges</h3> <!-- Centered Heading -->
+    </div>
+    
+</div>
+<div class="row justify-content-center badges-container mb-5">
+    <!-- Badge 1 -->
+    <div class="col-md-2 col-sm-6 badge-box text-center mb-4">
+        <div class="badge-name">Best Performer</div> <!-- Badge Name -->
+        <img src="images/best performer.png" class="badge-image" alt="Best Performer">
+        <div class="badge-description">Awarded to the participant with the highest score.</div>
+    </div>
+    <!-- Badge 2 -->
+    <div class="col-md-2 col-sm-6 badge-box text-center mb-4">
+        <div class="badge-name">Motivator</div> <!-- Badge Name -->
+        <img src="images/motivator.png" class="badge-image" alt="Motivator">
+        <div class="badge-description">Awarded to the participant who encourages others.</div>
+    </div>
+    <!-- Badge 3 -->
+    <div class="col-md-2 col-sm-6 badge-box text-center mb-4">
+        <div class="badge-name">Daily Achiever</div> <!-- Badge Name -->
+        <img src="images/daily achiever.png" class="badge-image" alt="Daily Achiever">
+        <div class="badge-description">For completing tasks consistently each day.</div>
+    </div>
+    <!-- Badge 4 -->
+    <div class="col-md-2 col-sm-6 badge-box text-center mb-4">
+        <div class="badge-name">First Place</div> <!-- Badge Name -->
+        <img src="images/first.png" class="badge-image" alt="First Place">
+        <div class="badge-description">Awarded to the first participant to complete the challenge.</div>
+    </div>
+    <!-- Badge 5 -->
+    <div class="col-md-2 col-sm-6 badge-box text-center mb-4">
+        <div class="badge-name">Second Place</div> <!-- Badge Name -->
+        <img src="images/second.png" class="badge-image" alt="Second Place">
+        <div class="badge-description">Awarded to the second participant to complete the challenge.</div>
+    </div>
+    <!-- Badge 6 -->
+    <div class="col-md-2 col-sm-6 badge-box text-center mb-4">
+        <div class="badge-name">Third Place</div> <!-- Badge Name -->
+        <img src="images/third.png" class="badge-image" alt="Third Place">
+        <div class="badge-description">Awarded to the third participant to complete the challenge.</div>
+    </div>
+</div>
+
+
+
+        <!-- Table Section -->
+        <div class="table-responsive">
+            <table id="leaderboard" class="table table-bordered table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Rank</th>
+                        <th>Name</th>
+                        <th>Access Code Redemption</th>
+                        <th>All Skill Badges & Games Completed</th>
+                        <th>No. of Skill Badges Completed</th>
+                        <th>No. of Arcade Games Completed</th>
+                        <th>Special Badges</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- This will be populated dynamically by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center mt-5">
+        <img src="images/logo.png" alt="GDG Logo" width="100">
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
