@@ -47,8 +47,7 @@ function populateLeaderboard(data) {
         const specialBadges = item['Special Badges'] ? item['Special Badges'].split(',') : []; // Assuming badges are comma-separated
         const badgeImages = specialBadges.map(badge => {
             const trimmedBadge = badge.trim();
-            return trimmedBadge ? `<img src="images/${trimmedBadge}.png" class="special-badge" alt="${trimmedBadge} Badge">` : '';
-// Generate img tag
+            return trimmedBadge ? `<img src="images/${trimmedBadge}.png" class="special-badge" alt="${trimmedBadge} Badge">` : ''; // Generate img tag
         }).join(''); // Join the images into a single string
 
         // Assign emojis for the top 3 ranks
@@ -64,6 +63,7 @@ function populateLeaderboard(data) {
         }
 
         let row = `<tr>
+            <td>${index + 1}</td> <!-- Serial Number Column -->
             <td class="rank">${rankDisplay}</td>
             <td>${item['User Name'] || 'N/A'}</td>
             <td>${item['Access Code Redemption Status'] || 'N/A'}</td>
@@ -75,11 +75,9 @@ function populateLeaderboard(data) {
         tableBody.innerHTML += row;
     });
 
-    // Update the info boxes
     // Update the info boxes dynamically with the numbers
-document.getElementById('badgesCompleted').innerText = `People Completed All 15 Badges: ${badgesCompletedCount}`;
-document.getElementById('gamesCompleted').innerText = `People Completed Arcade Game: ${gamesCompletedCount}`;
-
+    document.getElementById('badgesCompleted').innerText = `People Completed All 15 Badges: ${badgesCompletedCount}`;
+    document.getElementById('gamesCompleted').innerText = `People Completed Arcade Game: ${gamesCompletedCount}`;
 }
 
 // Fetch CSV and parse it
@@ -101,14 +99,24 @@ function fetchAndParseCSV() {
 // Function to filter the leaderboard based on search input
 function filterTable() {
     const input = document.getElementById('searchInput').value.toLowerCase();
+
+    // If search input is empty, reload the original leaderboard data
+    if (input === '') {
+        populateLeaderboard(leaderboardData);
+        return;
+    }
+
+    // Filter leaderboardData based on User Name containing the search term
     const filteredData = leaderboardData.filter(item => {
-        return (
-            item['User Name'] && item['User Name'].toLowerCase().includes(input) // Only filtering by Name now
-        );
+        return item['User Name'] && item['User Name'].toLowerCase().includes(input);
     });
-    
-    populateLeaderboard(filteredData); // Repopulate the leaderboard with filtered data
+
+    // Repopulate the leaderboard with the filtered data
+    populateLeaderboard(filteredData);
 }
 
 // Fetch the CSV file and populate leaderboard when the page loads
-document.addEventListener('DOMContentLoaded', fetchAndParseCSV);
+document.addEventListener('DOMContentLoaded', () => {
+    fetchAndParseCSV();
+    document.getElementById('searchInput').addEventListener('input', filterTable); // Add real-time search functionality
+});
