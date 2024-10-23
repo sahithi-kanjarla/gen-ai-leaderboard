@@ -1,5 +1,5 @@
 // URL of the CSV file on your cloud storage
-const csvFileUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRiYvdqFeRJkTjpnoin3_Bzs5vaEslC46MOioBIbi_1AtOdw_aJQ5pTBFVQAFjg4wxQzbGj7XfyA5aZ/pub?output=csv'; // Replace with your actual URL
+const csvFileUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQSwz-Kc03SUciAGxVSeXlVT318RCJRjtg0IyatZb8ue5eCDwNIIC8QLDzXGWf6Jl_SPhlxoVUOQmIU/pub?output=csv'; // Replace with your actual URL
 
 let leaderboardData = []; // Global variable to store the fetched leaderboard data
 
