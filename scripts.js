@@ -52,7 +52,7 @@ function populateLeaderboard(data) {
 
         
 
-        let row = `<tr>
+      let row = `<tr>
             <td>${index + 1}</td> <!-- Serial Number Column -->
             
             <td>${item['User Name'] || 'N/A'}</td>
@@ -64,7 +64,6 @@ function populateLeaderboard(data) {
         </tr>`;
         tableBody.innerHTML += row;
     });
-
     // Update the info boxes dynamically with the numbers
     document.getElementById('badgesCompleted').innerText = `People Completed All 15 Badges: ${badgesCompletedCount}`;
     document.getElementById('gamesCompleted').innerText = `People Completed Arcade Game: ${gamesCompletedCount}`;
