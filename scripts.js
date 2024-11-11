@@ -50,21 +50,11 @@ function populateLeaderboard(data) {
             return trimmedBadge ? `<img src="images/${trimmedBadge}.png" class="special-badge" alt="${trimmedBadge} Badge">` : ''; // Generate img tag
         }).join(''); // Join the images into a single string
 
-        // Assign emojis for the top 3 ranks
-        let rankDisplay;
-        if (currentRank === 1) {
-            rankDisplay = '🥇'; // Gold medal for rank 1
-        } else if (currentRank === 2) {
-            rankDisplay = '🥈'; // Silver medal for rank 2
-        } else if (currentRank === 3) {
-            rankDisplay = '🥉'; // Bronze medal for rank 3
-        } else {
-            rankDisplay = currentRank; // Display numeric rank for others
-        }
+        
 
         let row = `<tr>
             <td>${index + 1}</td> <!-- Serial Number Column -->
-            <td class="rank">${rankDisplay}</td>
+            
             <td>${item['User Name'] || 'N/A'}</td>
             <td>${item['Access Code Redemption Status'] || 'N/A'}</td>
             <td><span class="${(skillBadges + arcadeGames === 16) ? 'yes' : 'no'}">${(skillBadges + arcadeGames === 16) ? 'Yes' : 'No'}</span></td>
