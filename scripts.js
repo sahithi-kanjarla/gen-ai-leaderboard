@@ -56,7 +56,7 @@ function populateLeaderboard(data) {
             <td>${index + 1}</td> <!-- Serial Number Column -->
             
             <td>${item['User Name'] || 'N/A'}</td>
-            <td>${item['Access Code Redemption Status'] || 'N/A'}</td>
+            
             <td><span class="${(skillBadges + arcadeGames === 16) ? 'yes' : 'no'}">${(skillBadges + arcadeGames === 16) ? 'Yes' : 'No'}</span></td>
             <td>${skillBadges}</td>
             <td>${arcadeGames}</td>
